@@ -1,6 +1,7 @@
 package com.github.marschall.stringdeduplicationheapstatistics;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +20,9 @@ class HeapParserTests {
 
   @Test
   void parseSample() throws IOException {
-    StringDeduplicationHeapStatistics heapStatistics = this.parser.parse(new File("src/test/resources/sample.hprof"));
+    File heapDump = new File("src/test/resources/sample.hprof");
+    assumeTrue(heapDump.exists(), "heap dump exists");
+    StringDeduplicationHeapStatistics heapStatistics = this.parser.parse(heapDump);
     assertNotNull(heapStatistics);
     System.out.println("string deduplicated: " + heapStatistics.stringsDeduplicated());
     System.out.println("bytes saved: " + heapStatistics.bytesSaved());
