@@ -1,3 +1,6 @@
 target/
 *.hprof
+*.nphd
+*.ref
+*.map
 
