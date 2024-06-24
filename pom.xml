@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.marschall</groupId>
   <artifactId>string-deduplication-heap-statistics</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <inceptionYear>2024</inceptionYear>
   <name>StringDeduplication Heap Statistics</name>
   <description>Parses heap dumps to estimate the effect of -XX:+UseStringDeduplication on heap footprint.</description>
@@ -14,7 +14,7 @@
     <connection>scm:git:git@github.com:marschall/string-deduplication-heap-statistics.git</connection>
     <developerConnection>scm:git:git@github.com:marschall/string-deduplication-heap-statistics.git</developerConnection>
     <url>${project.url}</url>
-    <tag>1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <developers>
